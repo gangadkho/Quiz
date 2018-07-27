@@ -2,15 +2,18 @@ var io = require("socket.io").listen(8100);
 console.log("Server started at 8100 port");
 
 io.sockets.on('connection', function (socket) {
-	socket.emit('message', 'You are connected!');
-
+	
+	console.log('Client is connected.')
   socket.on('time-now', function (data) {
-  	console.log('Time now should be given in time-response event name');
-    socket.emit('time-response', 'Time Response is ***********');
+  	console.log('Client requested for current time');
+  	var currTime = new Date();
+    socket.emit('time-response', currTime.toString());
   });
 
   socket.on('date-tomorrow', function (data) {
-  	console.log('Tomorrows date should be replied in tomorrow-response event name');
-   	socket.emit('tomorrow-response', 'Tomorrow Response is ***********');
+  	console.log('Client requested for tomorrows date');
+  	var currTime = new Date();
+  	currTime.setDate(currTime.getDate() + 1);
+   	socket.emit('tomorrow-response', currTime.toDateString());
   });
 });
