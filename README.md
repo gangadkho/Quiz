@@ -1,6 +1,4 @@
-# Project Title
-
-Structo - General Software Quiz
+# Structo - General Software Quiz
 
 ## Task 1
 
@@ -12,7 +10,7 @@ Built using Node JS.
 
 ### Prerequisites
 
-Softwares needed to run task 1
+Softwares needed:
 
 ```
 Node js (any latest version)
@@ -20,25 +18,25 @@ Node js (any latest version)
 
 ### Running
 
-Download or clone the Task 1 directory
+Download or clone the Task 1 directory. In the "Task 1" directory, run the following command:
 
 ```
 npm install
 node index.js
 ```
 
-This should start server on port 8100.
+This should start server on port 8100. You can change the port used in the config.json file.
 Tested with the online client tool (http://amritb.github.io/socketio-client-tool/)
 
 ## Task 2
 
-Maximum chain length calculator application
+Maximum chain length calculator application.
 
 Built using Java 8. Packaged and run using Maven.
 
 ### Prerequisites
 
-Softwares needed to run task 2
+Softwares needed:
 
 ```
 JDK 8 
@@ -47,7 +45,7 @@ Maven (any latest version)
 
 ### Running
 
-Download or clone the Task 1 directory
+Download or clone the Task 1 directory. In the direction "Solution" run the following command:
 
 ```
 mvn package
@@ -64,4 +62,5 @@ i, j > 0
 If there is an invalid value, default values of i (100) and j (200) are considered.
 
 Application Input 		=> i and j (Positive integers greater than 0)
+
 Application Output 		=> maximum chain length of all numbers in range i and j (including i and j)
