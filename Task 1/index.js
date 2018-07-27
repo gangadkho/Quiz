@@ -1,5 +1,7 @@
-var io = require("socket.io").listen(8100);
-console.log("Server started at 8100 port");
+var CONFIG = require('./config.json');
+
+var io = require("socket.io").listen(CONFIG.serverport);
+console.log("Server started at port " + CONFIG.serverport);
 
 io.sockets.on('connection', function (socket) {
 	
